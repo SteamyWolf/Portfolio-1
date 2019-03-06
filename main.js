@@ -15,15 +15,18 @@
 // var name = prompt("What is your name?"); var lastName = prompt("What is your last name?"); alert(name + " " + lastName);
 
 
-var age = prompt("How old are you?"); {
-if (age < 16) { 
-    alert("you can't drive, stay off the road loser!"); 
-} else {
-    alert("You can drive, Hooray!! But unfortunately, you're getting older.")
-}
-}
+// var age = prompt("How old are you?"); {
+// if (age < 16) { 
+//     alert("you can't drive, stay off the road loser!"); 
+// } else {
+//     alert("You can drive, Hooray!! But unfortunately, you're getting older.")
+// }
+// }
 
 var h1 = "Welcome, my name is Wyatt";
 document.getElementById("JSTEST").innerHTML = h1;
 
 var myList = ["oranges", "apples", "bananas"]
+myList.forEach(function(x) {
+console.log(x)
+});
