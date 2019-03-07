@@ -13,7 +13,7 @@
 // alert(any)
 
 // var name = prompt("What is your name?"); var lastName = prompt("What is your last name?"); alert(name + " " + lastName);
-
+import {  } from "module";
 
 var age = prompt("How old are you?"); {
 if (age < 16) { 

@@ -1,5 +1,5 @@
-import { people } from '../data/people.js' 
-import { planets } from '..data/planets.js'
+import { people } from '../data/people.js'
+import { planets } from '../data/planets.js'
 
 const getLastNumber = (url) => {
     let end = url.lastIndexOf('/')
@@ -10,17 +10,17 @@ const getLastNumber = (url) => {
     return url.slice(start, end)    
 }
 
-const allHomeWorlds = people.map(person.map => {
-    let founderWorld = planets.find(planet => {
+const allHomeWorlds = people.map(person => {
+    let foundWorld = planets.find(planet => {
         return planet.url === person.homeworld
     })
-    let imgURL = getLastNumber(person.url)
+    let imageURL = getLastNumber(person.url)
     getLastNumber(person.url)
     return {
         name: person.name,
-        home: founderWorld.name,
+        home: foundWorld.name,
         eye_color: person.eye_color,
-        imagePath: 
+        imagePath: `https://starwars-visualguide.com/assets/img/characters/${imageURL}.jpg`,
     }
 })
 
@@ -29,16 +29,16 @@ console.log(allHomeWorlds)
 const mainContainer = document.createElement('div')
 mainContainer.classname = 'container'
 
-allHomewWorlds.forEach((person) => 
+allHomeWorlds.forEach((person) => {
     let personElement = document.createElement('div')
     let planetElement = document.createElement('p')
-    let imgElement = document.createElement('img')
+    let imageElement = document.createElement('img')
 
     personElement.className = 'box'
     personElement.textContent = person.name
     planetElement.textContent = person.home
 
-    personElement appendChild(planetElement)
+    personElement.appendChild(planetElement)
     personElement.appendChild(imageElement)
-    main
+    mainContainer.appendChild(personElement)
 })
