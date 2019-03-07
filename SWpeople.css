@@ -1,0 +1,13 @@
+
+div.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.notification {
+    max-width: 250px;
+    text-align: center;
+    font-size: 1rem;
+}
