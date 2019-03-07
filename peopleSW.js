@@ -42,3 +42,5 @@ allHomeWorlds.forEach((person) => {
     personElement.appendChild(imageElement)
     mainContainer.appendChild(personElement)
 })
+
+document.body.appendChild(mainContainer)
