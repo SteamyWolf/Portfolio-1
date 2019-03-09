@@ -15,6 +15,7 @@ const allHomeWorlds = people.map(person => {
         return planet.url === person.homeworld
     })
     let imageURL = getLastNumber(person.url)
+    getLastNumber(person.url)
     return {
         name: person.name,
         home: foundWorld.name,
@@ -26,18 +27,16 @@ const allHomeWorlds = people.map(person => {
 console.log(allHomeWorlds)
 
 const mainContainer = document.createElement('div')
-mainContainer.className = 'container'
+mainContainer.classname = 'container'
 
 allHomeWorlds.forEach((person) => {
     let personElement = document.createElement('div')
     let planetElement = document.createElement('p')
     let imageElement = document.createElement('img')
-    
 
-    personElement.className = 'notification'
+    personElement.className = 'box'
     personElement.textContent = person.name
     planetElement.textContent = person.home
-    imageElement.src = person.imagePath
 
     personElement.appendChild(planetElement)
     personElement.appendChild(imageElement)
