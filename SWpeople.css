@@ -16,3 +16,10 @@ div.notification {
     flex-direction: column;
     max-width: 400px;
 }
+
+h1 {
+    margin: 40px;
+    font-size: 5vw;
+    font-style: oblique;
+    font-weight: bold;
+}
