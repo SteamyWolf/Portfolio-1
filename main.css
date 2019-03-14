@@ -2,7 +2,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     margin: 0;
-    background-color: black;
   }
 
   nav ul {
@@ -35,7 +34,7 @@ body {
   .intro {
     top: 0;
     min-height: 55vh;
-    background: linear-gradient(to bottom, #02A676 0%, #A87F54 100%);
+    background: black;
     padding-top: 45vh;
     /*   line-height: 100vh; */
     /*   width:100%;
@@ -105,9 +104,38 @@ body {
     padding: 20px;
   }
 
+/* ----------Star Wars Intro------------ */
+
 .star {
   position: absolute;
   width: 1px;
   height: 1px;
   background-color: white;
+}
+
+.intro1 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 1;
+  animation: intro 6s ease-out 1s;
+  color: rgb(75, 213, 238);
+  font-weight: 400;
+  font-size: 300%;
+  opacity: 0;
+}
+
+@keyframes intro1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
