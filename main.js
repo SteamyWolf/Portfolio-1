@@ -13,7 +13,7 @@
 // alert(any)
 
 // var name = prompt("What is your name?"); var lastName = prompt("What is your last name?"); alert(name + " " + lastName);
-import {  } from "module";
+// import {  } from "module";
 
 var age = prompt("How old are you?"); {
 if (age < 16) { 
@@ -23,31 +23,37 @@ if (age < 16) {
 }
 }
 
-// var h1 = "Welcome, my name is Wyatt";
-// document.getElementById("JSTEST").innerHTML = h1;
+var date = new Date();
+alert(date);
+
+var h1 = "Welcome, my name is Wyatt";
+document.getElementById("JSTEST").innerHTML = h1;
+var p = "Web Developer";
+document.getElementById("pclass").innerHTML = p;
 
 // var myList = ["oranges", "apples", "bananas"]
 // myList.forEach(function(x) {
 // console.log(x)
 // });
 
-const numStars = 100
+// const numStars = 100
 
-for (let i = 0; i < numStars; i++) {
-    let star = document.createElement("div");
-    star.classname = "star";
-    var xy = getRandomPosition();
-    star.style.top = xy[0] + 'px';
-    star.style.left = xy[1] + 'px';
-    document.body.append(star);
-}
+// for (let i = 0; i < numStars; i++) {
+//     let star = document.createElement("div");
+//     star.classname = "star";
+//     var xy = getRandomPosition();
+//     star.style.top = xy[0] + 'px';
+//     star.style.left = xy[1] + 'px';
+//     document.body.append(star);
+// }
 
 
-function getRandomPosition() {
-    var y = window.innerWidth;
-    var x = window.innerHeight;
-    var randomX = Math.floor(Math.random()*x);
-    var randomY = Math.floor(Math.random()*y);
-    return [randomX, randomY];
-}
+// function getRandomPosition() {
+//     var y = window.innerWidth;
+//     var x = window.innerHeight;
+//     var randomX = Math.floor(Math.random()*x);
+//     var randomY = Math.floor(Math.random()*y);
+//     return [randomX, randomY];
+// }
+
 
