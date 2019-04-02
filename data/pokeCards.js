@@ -8,36 +8,75 @@ class Pokemon {
 
 const mainContainer = document.querySelector('.container')
 
-  function createPokeCard(pokeData) {
-      let card = document.createElement('div')
-      card.className = 'box'
+function cardFront(pokeData) {
+      let cardFront = document.createElement('div')
+      cardFront.className = 'card__face'
       let figure = document.createElement('figure')
       let caption = document.createElement('figcatpion')
       let image = document.createElement('img')
-
-      // let upperName = pokeData.name.charAt(0).toUpperCase() + pokeData.name.slice(1)
+      
       caption.textContent = pokeData.name
       if(pokeData.id !== 0) {
         image.src = `../images/${pokeData.imageID}${pokeData.name}.png`
       } else {
         image.src = `../images/pokeball.png`
       }
-      image.src = pokeData.sprites.front_shiny
+
+      figure.appendChild(image)
       figure.appendChild(caption)
-      card.appendChild(figure)
-      mainContainer.appendChild(card)
+      cardFront.appendChild(figure)
+      return cardFront
+}
+
+function cardBack(pokeData) {
+  let cardBack = document.createElement('div')
+  let backImage = document.createElement('img')
+  backImage.src = '../images/pokeball.png'
+  cardBack.className = 'card__face card__face--back'
+  cardBack.appendChild(backImage)
+  return cardBack
+}
+
+  function createPokeCard(pokeData) {
+    let scene = document.createElement('div')
+    scene.className = 'scene'
+      let card = document.createElement('div')
+      card.className = 'card'
+
+      card.addEventListener( 'click', function() {
+        card.classList.toggle('is-flipped');
+      });
+      
+      card.appendChild(cardFront(pokeData))
+      card.appendChild(cardBack(pokeData))
+      scene.appendChild(card)
+      mainContainer.appendChild(scene)
   }
 
-  // pokemon.forEach((singleMon) => {
-  //   fetch(singleMon.url)
-  //   .then(function(response) {
-  //     return response.json();
-  //   })
-  //   .then(function(myJson) {
-  //     console.log(myJson)
-  //     // createPokeCard(myJson);
-  //   });
-  // })
+  pokemon.forEach(singleMon => {
+    fetch(singleMon.url)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      console.log(myJson)
+      createPokeCard(matchIdToImage(myJson));
+    });
+  })
+
+  function matchIdToImage(aPokemon) {
+    if(aPokemon.id < 10) {
+      aPokemon.imageID = "00" + aPokemon.id
+    }
+    if(aPokemon.id > 9 && aPokemon.id < 100) {
+      aPokemon.imageID = "0" + aPokemon.id
+    }
+    if(aPokemon.id > 99) {
+      aPokemon.imageID = aPokemon.id
+    }
+    aPokemon.name = aPokemon.name.charAt(0).toUpperCase() + aPokemon.name.slice(1)
+    return aPokemon
+  }
 
   function fetchSinglePokemon(id) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
@@ -45,18 +84,7 @@ const mainContainer = document.querySelector('.container')
       return response.json()
     })
     .then(function(retreivedPokemon) {
-      console.log(retreivedPokemon.id.length)
-      if(retreivedPokemon.id < 10) {
-        retreivedPokemon.imageID = "00" + retreivedPokemon.id
-      }
-      if(retreivedPokemon.id > 9 && retreivedPokemon.id < 100) {
-        retreivedPokemon.imageID = "0" + retreivedPokemon.id
-      }
-      if(retreivedPokemon.id > 99) {
-        retreivedPokemon.imageID = retreivedPokemon.id
-      }
-      retreivedPokemon.name = retreivedPokemon.name.charAt(0).toUpperCase() + retreivedPokemon.name.slice(1)
-      createPokeCard(retreivedPokemon)
+      createPokeCard(matchIdtoImage(retrievedPokemon))
     })
   }
 
