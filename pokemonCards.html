@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pokemon Cards</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="/data/pokemon.css">
 </head>
 <body>
+    <header>
+        <h2>Pokemon Cards!</h2>
+        <h3>Click on a Pokemon to see it's stats!</h3>
+    </header>
     <main>
     <div class="container">
 
     </div>
-    <button class="button">Create New Pokemon</button>
+    <button id="fetchPokemon">Grab a Pokemon by it's ID</button>
+    <button id="wyattmon">Create a Wyattmon</button>
     </main>
         <script src="/data/pokeCards.js" type="module"></script>
 </body>

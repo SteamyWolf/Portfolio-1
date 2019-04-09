@@ -1,12 +1,16 @@
 
 button {
-    width: 300px;
+  width: 300px;
+  height: 80px;
+  font-size: 1.5rem;
+  background-color: #696664;
+  color: rgb(19, 32, 216);
 }
 
 main {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
@@ -18,11 +22,12 @@ align-items: center;
 body { font-family: sans-serif; }
 
 .scene {
-  width: 200px;
-  height: 260px;
+  width: 220px;
+  height: 240px;
   border: 1px solid #CCC;
-  margin: 40px 0;
+  margin: 4px;
   perspective: 600px;
+  text-align: center;
 }
 
 .card {
@@ -32,6 +37,8 @@ body { font-family: sans-serif; }
   transform-style: preserve-3d;
   cursor: pointer;
   position: relative;
+  background-color: black;
+  color: white;
 }
 
 .card.is-flipped {
@@ -40,10 +47,8 @@ body { font-family: sans-serif; }
 
 .card__face {
   position: absolute;
-  /* width: 100%;
+  width: 100%;
   height: 100%; */
-  /* line-height: 260px; */
-  /* color: white; */
   text-align: center;
   backface-visibility: hidden;
 }
@@ -55,5 +60,26 @@ body { font-family: sans-serif; }
 }
 
 img {
-   padding-top:  
+   padding: 4px;
+   width: 200px;
+   height: 200px;
+}
+
+figure {
+  margin: 0px;
+  padding: 4px;
+}
+
+.backImage {
+  position: absolute;
+  left: 6px;
+  opacity: 0.25;
+}
+
+.infoDiv {
+  position: relative;
+}
+
+header {
+  text-align: center;
 }
