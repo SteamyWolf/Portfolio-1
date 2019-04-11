@@ -118,22 +118,22 @@ function cardBack(pokeData) {
     this.moves = [
       {
         move: {
-          name: 'Genius',
+          name: 'Hot',
         },
       },
       {
         move: {
-          name: 'Brilliance',
+          name: 'Funny',
         },
       },
       {
         move: {
-          name: 'Hammer',
+          name: 'Cool',
         },
       },
       {
         move: {
-          name: 'Thunder',
+          name: 'Smart',
         },
       },
     ]
@@ -145,7 +145,8 @@ const selectPokemonButton = document.querySelector('#fetchPokemon')
 const poketypeButton = document.querySelector('#poketype')
 
 wyattmonButton.addEventListener('click', function() {
-  createPokeCard(matchIdToImage(new Pokemon('Wyattmon')))
+  let pokeCard = prompt("Create a Pokemon")
+  createPokeCard(new Pokemon(pokeCard))
 })
 
 selectPokemonButton.addEventListener('click', function() {
