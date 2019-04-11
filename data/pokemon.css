@@ -19,6 +19,11 @@ button {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+button:hover {
+  color: green;
+  background-color: yellow;
+}
+
 main {
   display: flex;
   flex-direction: column;
