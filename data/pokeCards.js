@@ -46,7 +46,7 @@ function cardBack(pokeData) {
   let cardBack = document.createElement('div')
   let backImage = document.createElement('img')
   backImage.src = `../images/pokeball.jpg`
-  cardBack.className = 'card__face card__face--back'
+  cardBack.className = 'card__face--back'
   cardBack.appendChild(backImage)
   cardBack.appendChild(cardBackInfo(pokeData))
   return cardBack
@@ -106,8 +106,8 @@ function cardBack(pokeData) {
     .then(function(response) {
       return response.json()
     })
-    .then(function(retreivedPokemon) {
-      createPokeCard(matchIdtoImage(retrievedPokemon))
+    .then(function(retrievedPokemon) {
+      createPokeCard(matchIdToImage(retrievedPokemon))
     })
   }
 
