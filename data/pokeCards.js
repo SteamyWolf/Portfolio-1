@@ -150,7 +150,7 @@ wyattmonButton.addEventListener('click', function() {
 })
 
 selectPokemonButton.addEventListener('click', function() {
-  let pokemonID = prompt('Enter an ID of an existing Pokemon')
+  let pokemonID = prompt('Enter any number to find a Pokemon')
   fetchSinglePokemon(pokemonID)
 })
 
