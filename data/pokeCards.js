@@ -8,7 +8,7 @@ function cardFront(pokeData) {
       let cardFront = document.createElement('div')
       cardFront.className = 'card__face'
       let figure = document.createElement('figure')
-      let caption = document.createElement('figcatpion')
+      let caption = document.createElement('figcaption')
       let image = document.createElement('img')
       
       caption.textContent = pokeData.name
