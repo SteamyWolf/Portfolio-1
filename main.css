@@ -8,11 +8,15 @@ body {
     text-align: right;
     position: fixed;
     width: 100%;
-    background-color: #008C72;
+    background-color: rgb(60, 98, 138);
   }
 
   #navbar {
     margin: 0px;
+    background-image: url(/images/logoW.png);
+    background-repeat: no-repeat;
+    background-size: 110px;
+    background-position: 20px;
   }
   
   nav ul li {
@@ -20,6 +24,9 @@ body {
     margin: 55px;
     margin-bottom: 15px;
     margin-top: 25px;
+    border: 3px red solid;
+    border-radius: 30px;
+    padding: 10px;
   }
   
   nav ul li a {
