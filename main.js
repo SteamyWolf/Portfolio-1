@@ -18,8 +18,10 @@
 var age = prompt("How old are you?"); {
 if (age < 16) { 
     alert("You can't drive. Stay off the road loser!"); 
-} else {
+} if (age > 15) {
     alert("You can drive, Hooray!! But unfortunately, you're getting older.")
+} else {
+    alert("Hey type in your age! No lying!")
 }
 }
 
