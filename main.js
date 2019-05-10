@@ -33,8 +33,6 @@ document.getElementById("JSTEST").innerHTML = h1;
 var p = "Web Developer";
 document.getElementById("pclass").innerHTML = p;
 
-const test = 
-
 // var myList = ["oranges", "apples", "bananas"]
 // myList.forEach(function(x) {
 // console.log(x)
