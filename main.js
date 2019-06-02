@@ -33,6 +33,14 @@ document.getElementById("JSTEST").innerHTML = h1;
 var p = "Web Developer";
 document.getElementById("pclass").innerHTML = p;
 
+var a = 34
+var b = 33
+function newVar(a,b) {
+    a + b {
+        return newVar
+    }
+}
+
 // var myList = ["oranges", "apples", "bananas"]
 // myList.forEach(function(x) {
 // console.log(x)
