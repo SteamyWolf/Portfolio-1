@@ -65,28 +65,12 @@ body {
     margin-top: -60px;
    }
 
-   .project-pics-links {
-    /* display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row; */
-   }
-
   .project-pic {
-    /* max-width: 60%;
-    flex-grow: 1;
-    border: 20px solid rgb(127, 215, 236);
-    height: 400px;
-    width: 400px;
-    border-radius: 30px; */
     max-width: 50vw;
     max-height: 50vh;
   }
 
   figcaption {
-    /* border: 5px solid rgb(127, 215, 236);
-    text-align: center;
-    border-radius: 30px; */
     text-align: center;
   }
 
@@ -152,11 +136,6 @@ body {
   .project-pics-links a:hover {
     text-decoration: none;
     color: red;
-  }
-
-  figure {
-    /* align-self: center;
-    align-content: center; */
   }
 
   .intro p {
