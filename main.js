@@ -1,69 +1,13 @@
 
 
-// function wyatt(a,b) {
-//     return a+b;
-// }
-// alert( wyatt(455,572) )
-// document.getElementById("JSTEST").innerHTML = wyatt(19,45);
+let getName = prompt('What is your name?');
 
-// function age(name, age) {
-//     return name + " " + age;
-// }
-// const any = age("Wyatt", 24)
-// alert(any)
-
-// var name = prompt("What is your name?"); var lastName = prompt("What is your last name?"); alert(name + " " + lastName);
-// import {  } from "module";
-
-var age = prompt("How old are you?"); {
-if (age < 16) { 
-    alert("You can't drive. Stay off the road loser!"); 
-} if (age > 15) {
-    alert("You can drive, Hooray!! But unfortunately, you're getting older.")
-} else {
-    alert("Hey type in your age! No lying!")
-}
-}
-
-var date = new Date();
-alert(date);
-
-var h1 = "Welcome, my name is Wyatt";
-document.getElementById("JSTEST").innerHTML = h1;
-var p = "Web Developer";
-document.getElementById("pclass").innerHTML = p;
-
-var a = 34
-var b = 33
-function newVar(a,b) {
-    a + b {
-        return newVar
-    }
-}
-
-// var myList = ["oranges", "apples", "bananas"]
-// myList.forEach(function(x) {
-// console.log(x)
-// });
-
-// const numStars = 100
-
-// for (let i = 0; i < numStars; i++) {
-//     let star = document.createElement("div");
-//     star.classname = "star";
-//     var xy = getRandomPosition();
-//     star.style.top = xy[0] + 'px';
-//     star.style.left = xy[1] + 'px';
-//     document.body.append(star);
-// }
+getName.toUpperCase();
 
 
-// function getRandomPosition() {
-//     var y = window.innerWidth;
-//     var x = window.innerHeight;
-//     var randomX = Math.floor(Math.random()*x);
-//     var randomY = Math.floor(Math.random()*y);
-//     return [randomX, randomY];
-// }
+document.querySelector('#JSTEST').innerText = `Hi ${getName}, my name is Wyatt`;
+document.querySelector('#pclass').innerText = "Web Developer";
+
+
 
 
